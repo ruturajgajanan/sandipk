@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>KRUSHI<br>pvt.limited</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Images of machine's</a>
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Machine Advantages</a>
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Operating steps</a>
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Sensor's used</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Automachine of Fertilizers</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Machine Design. </b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="images\Screenshot (105).png" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="images\Screenshot (106).png" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="images\Picture2.png" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+      <img src="images\Screenshot (109).png" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="images\Screenshot (107).png" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="images\Screenshot (110).png" style="width:70%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Machine Advantages.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+
+    <p>-Time reduce to check soil and water</p>
+    <p>-No Guidance Need any Specialist</p>
+    <p>-Optimise fertilizers use your crops</p>
+    <p>-Proper Management of Water</p>
+    <p>-Proper treatment for land</p>
+
+
+  </div>
+
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Machine operate Steps-.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+
+    <p>-Input Soil Sample  </p>
+    <p>-Result’s of Soil Content’s  </p>
+    <p>-Quantity of Fertilizers Output  </p>
+    <p>-Input of Water Sample  </p>
+    <p>-Result of Water Sample   </p>
+    <p>-Water Distillation Technique   </p>
+    <p>-Whether broadcasting  </p>
+
+
+
+    </p>
+    <p><b>Some sensor's practically and vertually used.</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images\Screenshot (104).png" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>Moisture Sensor</h3>
+          <p class="w3-opacity">Estimate volumetric water content</p>
+          <p>Soil moisture sensors measure or estimate the amount of water in the soil.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images\Screenshot (101).png" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Temperature sensor</h3>
+          <p class="w3-opacity">Measures the temperature</p>
+          <p>measure the degree of hotness or coolness in soil.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="images\Screenshot (102).png" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Moisture sensor</h3>
+          <p class="w3-opacity">Water content</p>
+          <p>Soil moisture sensors measure or estimate the amount of water in the soil.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Sensor's</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>-Accelerate processes and make them more accurate.</p>
+    <p>-Collect process and asset data in real time.</p>
+    <p>-Monitor processes and assets accurately, reliably, and continuously.</p>
+    <p>-Increase productivity and reduce total cost of ownership.</p>
+    <p>-Lower energy wastage.</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Sensor</li>
+        <li class="w3-padding-16">Acoustic and Pneumatic Sensor</li>
+        <li class="w3-padding-16">Moisture Sensor</li>
+        <li class="w3-padding-16">Electrochemical Sensor</li>
+        <li class="w3-padding-16">Electrochemical Sensor</li>
+        <li class="w3-padding-16">Resistivity Sensor</li>
+        <li class="w3-padding-16">Portable Soil Detector</li>
+
+      </ul>
+    </div>
+
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">Function</li>
+        <li class="w3-padding-16">To check soil type</li>
+        <li class="w3-padding-16">To check moisture</li>
+        <li class="w3-padding-16">Soil nutrients </li>
+        <li class="w3-padding-16">Measure conductivity of soil</li>
+        <li class="w3-padding-16">To check NPK in soil</li>
+        <li class="w3-padding-16">To check temperature, moisture, PH, EC, NPK in soil</li>
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Do you want us to check your soil and water and optimize fertilizer use? Fill out the form :) We love meeting new people!</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="$Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="$Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="$Message" required>
+      </div>
+
+      <div class="w3-section">
+        <label>Contact Number</label>
+        <input class="w3-input w3-border" type="digit's" name="$number" required>
+      </div>
+
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send</button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">krushi.pvt.limited</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
